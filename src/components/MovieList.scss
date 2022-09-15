@@ -1,0 +1,12 @@
+@import "../common/colors.scss";
+
+.movies, .shows {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-row-gap: 40px;
+    grid-column-gap: 20px;
+}
+
+.movies-header, .shows-header {
+    color: $secondary-font;
+}

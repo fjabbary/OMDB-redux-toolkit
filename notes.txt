@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+
+
+9- make api calls from components and update store, and fetch data from store 
+10- Convert it to Async , redux thunk
+11-   createAsync function
+12 Repeat same for shows and
+13- add transition on hover 
+
+14- Work on movie detail components

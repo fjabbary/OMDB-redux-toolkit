@@ -1,0 +1,63 @@
+@import "../common/colors.scss";
+
+.header {
+    height: 80px;
+    background-color: $secondary-color;
+    color: $primary-font;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+
+    a {
+        color: $primary-font;
+        text-decoration: none;
+    }
+
+    .search {
+        width: 400px;
+
+        form {
+            position: relative;
+        }
+
+        input {
+            height: 30px;
+            width: 50%;
+            padding: 0 10px;
+            outline: none;
+            border: none;
+            background-color: transparent;
+            border-bottom: 3px solid $primary-font;
+            color: $primary-font;
+            transition: all 0.5s ease;
+        }
+
+        input:focus {
+            border-color: $secondary-font;
+            width: 100%;
+        }
+
+        input:focus + i {
+            opacity: 1;
+            transition: all 1s ease;
+        }
+
+        i.fa {
+            cursor: pointer;
+            position: absolute;
+            right: -10px;
+            bottom: 10px;
+            opacity: 0;
+        }
+
+      
+    }
+
+    .user-img {
+        width: 40px;
+        img {
+            width: 100%;
+        }
+    }
+}

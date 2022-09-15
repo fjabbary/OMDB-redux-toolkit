@@ -1,0 +1,60 @@
+@import "../common/colors.scss";
+
+.movie-detail {
+    color: $primary-font; 
+    padding: 40px;
+    display: flex;
+    line-height: 25px;
+
+    .section-desc {
+        width: 75%;
+        padding-right: 60px;
+    }
+
+    .section-poster {
+        width: 25%;
+
+        img {
+            width: 100%;;
+        }
+    }
+
+    .movie-info-top {
+        color: $secondary-font;
+
+        span {
+            margin-right: 20px;
+        }
+    }
+
+    .fa-star {
+        color: orange;
+    }
+
+    .fa-thumbs-up, .fa-film, .fa-calendar {
+        color: $primary-font;
+    }
+
+    .plot {
+        margin-bottom: 80px;
+        text-align: justify;
+    }
+
+    .movie-info-bottom {
+        line-height: 35px;;
+    }
+
+    .row {
+        display: flex;
+
+        div:first-child {
+            margin-right: 60px;
+            width: 80px;
+        }
+
+        div:nth-child(2) {
+            color: $secondary-font;
+        }
+    }
+}
+
