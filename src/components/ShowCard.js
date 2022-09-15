@@ -9,7 +9,7 @@ function ShowCard({ show }) {
             <Link to={`/movie/${show.imdbID}`}>
                 <div className="card-img">
                     <img src={show.Poster} alt={show.Title} />
-                </div>show
+                </div>
                 <div className="card-desc">
                     <p>{show.Title}</p>
                     <p>{show.Year}</p>

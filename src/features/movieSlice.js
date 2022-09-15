@@ -22,6 +22,16 @@ export const fetchSelectedMovie = createAsyncThunk('/fetchSelectedMovie', async 
     return response.data;
 })
 
+export const searchAllMovies = createAsyncThunk('/searchAllMovies', async (query) => {
+    const response = await movieApi.get(`/?apikey=${apiKey}&type=movie&s=${query}`);
+    return response.data;
+})
+
+export const searchAllShows = createAsyncThunk('/searchAllShows', async (query) => {
+    const response = await movieApi.get(`/?apikey=${apiKey}&type=series&s=${query}`);
+    return response.data;
+})
+
 const movieSlice = createSlice({
     name: 'movie',
     initialState,
@@ -43,7 +53,13 @@ const movieSlice = createSlice({
         },
         [fetchSelectedMovie.fulfilled]: (state, { payload }) => {
             return { ...state, selectedMovie: payload }
-        }
+        },
+        [searchAllMovies.fulfilled]: (state, { payload }) => {
+            return { ...state, moviesResponse: payload }
+        },
+        [searchAllShows.fulfilled]: (state, { payload }) => {
+            return { ...state, showsResponse: payload }
+        },
     }
 })
 
